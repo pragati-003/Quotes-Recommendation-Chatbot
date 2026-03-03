@@ -139,6 +139,17 @@ The chatbot is deployed locally using the **Rasa REST API** and integrated with 
 
 ## 📸 Screenshots
 
+## 📸 Chatbot Screenshots
+
+### Greeting
+![Greeting](screenshots/ui_greeting.png)
+
+### Motivation
+![Motivation](screenshots/ui_motivation.png)
+
+### Funny / Goodbye
+![Funny](screenshots/ui_funny_goodbye.png)
+
 Screenshots showing real-time chatbot conversations (greeting, motivation, inspiration, humor, and goodbye) are included as part of the project submission.
 
 ---

@@ -1,0 +1,16 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Rasa models
+models/
+
+# Rasa cache
+.rasa/
+
+# OS files
+.DS_Store
+Thumbs.db

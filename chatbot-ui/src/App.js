@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
 function App() {
@@ -12,31 +12,38 @@ function App() {
     }
   ]);
 
+  const messagesEndRef = useRef(null);
+
+  // Auto scroll when chat updates
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chat]);
+
   const sendMessage = async () => {
 
     if (message.trim() === "") return;
 
     const userMsg = { sender: "user", text: message };
 
-    setChat([...chat, userMsg]);
+    setChat(prev => [...prev, userMsg]);
 
-    const response = await fetch("http://localhost:5005/webhooks/rest/webhook",{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
+    const response = await fetch("http://localhost:5005/webhooks/rest/webhook", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
       },
-      body:JSON.stringify({
-        sender:"user",
-        message:message
+      body: JSON.stringify({
+        sender: "user",
+        message: message
       })
     });
 
     const data = await response.json();
 
-    if(data.length > 0){
+    if (data.length > 0) {
       const botMsg = {
-        sender:"bot",
-        text:data[0].text
+        sender: "bot",
+        text: data[0].text
       };
 
       setChat(prev => [...prev, botMsg]);
@@ -44,7 +51,6 @@ function App() {
 
     setMessage("");
   };
-
 
   return (
 
@@ -81,11 +87,17 @@ function App() {
 
           <div className="chat-box">
 
-            {chat.map((msg,index)=>(
-              <div key={index} className={msg.sender === "user" ? "user-msg" : "bot-msg"}>
+            {chat.map((msg, index) => (
+              <div
+                key={index}
+                className={msg.sender === "user" ? "user-msg" : "bot-msg"}
+              >
                 {msg.text}
               </div>
             ))}
+
+            {/* Scroll anchor */}
+            <div ref={messagesEndRef} />
 
           </div>
 
@@ -95,7 +107,10 @@ function App() {
               type="text"
               placeholder="Type a message..."
               value={message}
-              onChange={(e)=>setMessage(e.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") sendMessage();
+              }}
             />
 
             <button onClick={sendMessage}>

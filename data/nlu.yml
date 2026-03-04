@@ -1,14 +1,15 @@
 version: "3.1"
 
 nlu:
+
 - intent: greet
   examples: |
     - hi
     - hello
     - hey
+    - hii
     - good morning
     - good evening
-    - hello there
 
 - intent: goodbye
   examples: |
@@ -16,33 +17,45 @@ nlu:
     - goodbye
     - see you
     - see you later
-    - good night
 
-- intent: ask_motivation
+- intent: motivational
   examples: |
+    - motivational quote
     - motivate me
-    - I need motivation
-    - give me a motivational quote
-    - I feel demotivated
-    - inspire me
+    - give motivational quote
+    - motivation
+    - motivational
 
-- intent: ask_inspiration
+- intent: inspirational
   examples: |
-    - give me inspiration
+    - inspirational quote
     - inspire me
-    - I need inspiration
-    - share an inspirational quote
+    - inspiration
+    - inspirational
 
-- intent: ask_success
+- intent: success
   examples: |
     - success quote
-    - give me a success quote
-    - I want to be successful
-    - tell me about success
+    - success motivation
+    - quote about success
+    - success
 
-- intent: ask_funny
+- intent: funny
   examples: |
-    - tell me a joke
+    - funny quote
     - make me laugh
-    - give me a funny quote
-    - something funny
+    - joke
+    - funny
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - correct
+    - helpful
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not helpful

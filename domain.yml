@@ -3,29 +3,32 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - ask_motivation
-  - ask_inspiration
-  - ask_success
-  - ask_funny
+  - motivational
+  - inspirational
+  - success
+  - funny
+  - affirm
+  - deny
 
 responses:
+
   utter_greet:
     - text: "Hello! 👋 How can I help you today?"
 
   utter_goodbye:
-    - text: "Goodbye! 😊 Take care and stay positive."
+    - text: "Goodbye! Have a great day 😊"
 
-  utter_motivation:
-    - text: "Believe in yourself. Every step you take brings you closer to your goal 💪"
+  utter_thanks:
+    - text: "Thanks for your feedback 👍 If you want more quotes please mention the type."
 
-  utter_inspiration:
-    - text: "The best way to predict the future is to create it ✨"
+  utter_sorry:
+    - text: "Sorry about that. Try another category of quotes."
 
-  utter_success:
-    - text: "Success comes to those who work hard and never give up 🚀"
-
-  utter_funny:
-    - text: "Why don’t programmers like nature? 🌿 Too many bugs 😄"
+actions:
+  - action_motivational_quote
+  - action_inspirational_quote
+  - action_success_quote
+  - action_funny_quote
 
 session_config:
   session_expiration_time: 60

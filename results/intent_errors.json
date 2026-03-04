@@ -1,0 +1,10 @@
+[
+  {
+    "text": "inspire me",
+    "intent": "ask_motivation",
+    "intent_prediction": {
+      "name": "ask_inspiration",
+      "confidence": 0.6589480042457581
+    }
+  }
+]

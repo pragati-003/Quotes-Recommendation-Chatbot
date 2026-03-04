@@ -132,23 +132,21 @@ The chatbot is deployed locally using the **Rasa REST API** and integrated with 
 
 ## 🎥 Demo
 
-* **Demo Video:** (Google Drive link added in SkillWallet)
+* **Demo Video:** [(Google Drive link added in SkillWallet)](https://drive.google.com/file/d/1emDkIpMabuXtK36-00WhbEfphVI7WBK9/view?usp=drive_link)
 * **GitHub Repository:** [https://github.com/pragati-003/Quotes-Recommendation-Chatbot](https://github.com/pragati-003/Quotes-Recommendation-Chatbot)
 
 ---
 
 ## 📸 Screenshots
 
-## 📸 Chatbot Screenshots
-
 ### Landing Page
-![Landing Page](screenshots/landing.png)
+![Landing Page](screenshots/landing-page.png)
 
 ### Chat Conversation
-![Chat Conversation](screenshots/chat.png)
+![Chat Conversation](screenshots/chat-conversation.png)
 
 ### Motivational Quote
-![Motivational Quote](screenshots/motivation.png)
+![Motivational Quote](screenshots/motivational-quote.png)
 
 Screenshots showing real-time chatbot conversations (greeting, motivation, inspiration, humor, and goodbye) are included as part of the project submission.
 

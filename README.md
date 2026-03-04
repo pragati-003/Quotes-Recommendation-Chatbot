@@ -44,22 +44,32 @@ This project demonstrates the complete lifecycle of a chatbot, including **NLU t
 ## 📂 Project Structure
 
 ```
-Quotes-Recommendation-Chatbot/
+Quotes-Recommendation-Chatbot
 │
-├── actions/
-│   └── actions.py
-├── data/
-│   ├── nlu.yml
-│   ├── stories.yml
-│   └── rules.yml
-├── tests/
-│   └── test_stories.yml
-├── web/
-│   └── index.html
+├── actions.py
 ├── config.yml
 ├── domain.yml
-├── credentials.yml
 ├── endpoints.yml
+├── requirements.txt
+│
+├── data
+│ ├── nlu.yml
+│ └── stories.yml
+│
+├── models
+│
+├── chatbot-ui
+│ ├── public
+│ ├── src
+│ │ ├── App.js
+│ │ └── App.css
+│ └── package.json
+│
+├── screenshots
+│ ├── landing-page.png
+│ ├── chat-conversation.png
+│ └── motivational-quote.png
+│
 └── README.md
 ```
 
